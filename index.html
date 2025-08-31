@@ -6,83 +6,69 @@
     <title>Randiom - Tu Radio Favorita</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f0f2f5;
-            color: #333;
+            font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada para el ASCII art */
+            background-color: #000000; /* Fondo negro */
+            color: #ff8c00; /* Texto naranja */
             text-align: center;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            border-bottom: 5px solid #ff4500;
-        }
-        header h1 {
             margin: 0;
-            font-size: 2.5em;
-            text-transform: uppercase;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
             padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-        .player-container {
-            margin-top: 20px;
-            padding: 10px;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            background-color: #fafafa;
+        .logo-container {
+            margin-bottom: 20px;
         }
-        .player-container h2 {
-            color: #ff4500;
+        pre {
+            font-size: 0.7em; /* Ajusta el tamaño del ASCII art */
+            line-height: 0.8; /* Reduce el espacio entre líneas */
+            color: #ff8c00; /* Color del ASCII art */
+            text-shadow: 0 0 5px #ff8c00; /* Efecto de brillo */
+        }
+        .title {
+            font-family: Arial, sans-serif;
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #ff8c00;
+            margin-bottom: 40px;
+        }
+        .iframe-container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border: 2px solid #ff8c00;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
         }
         iframe {
             width: 100%;
-            height: 150px; /* Puedes ajustar esta altura según tus necesidades */
+            height: 150px;
             border: none;
             border-radius: 5px;
-        }
-        footer {
-            margin-top: 20px;
-            padding: 10px 0;
-            background-color: #333;
-            color: white;
-            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Randiom</h1>
-        <p>¡La música que te acompaña!</p>
-    </header>
-
-    <div class="container">
-        <h2>Escúchanos en vivo</h2>
-        <p>Disfruta de la mejor música, las últimas noticias y programas exclusivos.</p>
-        
-        <div class="player-container">
-            <h2>Reproductor de Radio</h2>
-            
-            <iframe id="player" tittle="Ejemplo de player incrustado" width="1280" height="720" src="https://38c17bd87d36.ngrok-free.app" style="border: 0px" allowfullscreen="allowfullscreen"></iframe>
-        </div>
-        
-        <h3>Sobre Nosotros</h3>
-        <p>Randiom es una estación de radio online dedicada a ofrecer una programación variada y de alta calidad para todos los gustos. Desde éxitos actuales hasta clásicos atemporales, tenemos algo para ti.</p>
+    <div class="logo-container">
+        <pre>
+                                                                ⡿⡿⣻⢿⢿⢿⢿⢿⣿⣿⣿⠟⡋⠍⠊⠌⠌⠌⠂⠊⠄⠂⠙⠿⠻⡻⠻⢛⠻⠿⢿⣿⣿⣿⣿⢿⢿⢿⢿⣻
+                                                                ⣗⡽⡮⡷⣽⣺⣽⣿⣾⠟⠈⠄⠄⡀⢁⠂⢘⠈⡈⡠⠁⠄⢀⠘⠄⠄⠈⠄⠄⠄⠈⠈⠳⠻⣯⣿⣽⣞⣵⡳
+                                                                ⣗⢯⢫⢯⣷⡿⣽⠏⡁
+        </pre>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Randiom. Todos los derechos reservados.</p>
-    </footer>
+    <h1 class="title">Randiom</h1>
+
+    <div class="iframe-container">
+        <iframe id="player" tittle="Ejemplo de player incrustado" width="1280" height="720" src="http://localhost:8080" style="border: 0px" allowfullscreen="allowfullscreen"></iframe>
+    </div>
 
 </body>
 </html>
-            
         
+
