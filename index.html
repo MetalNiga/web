@@ -6,9 +6,9 @@
     <title>Randiom - Tu Radio Favorita</title>
     <style>
         body {
-            font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada para el ASCII art */
-            background-color: #000000; /* Fondo negro */
-            color: #ff8c00; /* Texto naranja */
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #000000;
+            color: #ff8c00;
             text-align: center;
             margin: 0;
             padding: 20px;
@@ -17,15 +17,21 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            box-sizing: border-box;
         }
         .logo-container {
             margin-bottom: 20px;
+            white-space: pre;
+            overflow-x: auto;
+            max-width: 100%;
         }
         pre {
-            font-size: 0.7em; /* Ajusta el tamaño del ASCII art */
-            line-height: 0.8; /* Reduce el espacio entre líneas */
-            color: #ff8c00; /* Color del ASCII art */
-            text-shadow: 0 0 5px #ff8c00; /* Efecto de brillo */
+            font-size: 0.8em;
+            line-height: 0.7;
+            color: #ff8c00;
+            text-shadow: 0 0 5px rgba(255, 140, 0, 0.7);
+            margin: 0;
+            padding: 0;
         }
         .title {
             font-family: Arial, sans-serif;
@@ -34,9 +40,10 @@
             letter-spacing: 5px;
             color: #ff8c00;
             margin-bottom: 40px;
+            text-shadow: 0 0 10px rgba(255, 140, 0, 0.8);
         }
         .iframe-container {
-            max-width: 600px;
+            max-width: 1280px; /* Ancho máximo del contenedor */
             width: 100%;
             padding: 20px;
             background-color: #1a1a1a;
@@ -46,9 +53,10 @@
         }
         iframe {
             width: 100%;
-            height: 150px;
+            height: 720px; /* Altura fija de 720px */
             border: none;
             border-radius: 5px;
+            background-color: #000000;
         }
     </style>
 </head>
@@ -56,19 +64,33 @@
 
     <div class="logo-container">
         <pre>
-                                                                ⡿⡿⣻⢿⢿⢿⢿⢿⣿⣿⣿⠟⡋⠍⠊⠌⠌⠌⠂⠊⠄⠂⠙⠿⠻⡻⠻⢛⠻⠿⢿⣿⣿⣿⣿⢿⢿⢿⢿⣻
-                                                                ⣗⡽⡮⡷⣽⣺⣽⣿⣾⠟⠈⠄⠄⡀⢁⠂⢘⠈⡈⡠⠁⠄⢀⠘⠄⠄⠈⠄⠄⠄⠈⠈⠳⠻⣯⣿⣽⣞⣵⡳
-                                                                ⣗⢯⢫⢯⣷⡿⣽⠏⡁
+         _         _         _
+        /_\       /_\       /_\
+       / _ \     / _ \     / _ \
+      | (_) |   | (_) |   | (_) |
+       \___/     \___/     \___/
+         |         |         |
+         |         |         |
+      _.-'-._   _.-'-._   _.-'-._
+     /       \ /       \ /       \
+    |   O   | |   O   | |   O   |
+     \_____/   \_____/   \_____/
+     / \ / \   / \ / \   / \ / \
+    / _ Y _ \ / _ Y _ \ / _ Y _ \
+   | | |_| | | | |_| | | | |_| |
+   | |     | | |     | | |     |
+    \|_____|/   \|_____|/   \|_____|/
+    / \   / \   / \   / \   / \   / \
+   | |   | | | |   | | | |   | |
+    \|___|/   \|___|/   \|___|/
         </pre>
     </div>
 
     <h1 class="title">Randiom</h1>
 
     <div class="iframe-container">
-        <iframe id="player" tittle="Ejemplo de player incrustado" width="1280" height="720" src="http://localhost:8080" style="border: 0px" allowfullscreen="allowfullscreen"></iframe>
+        <iframe src="https://example.com/enlace-de-tu-reproductor" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
 </body>
 </html>
-        
-
