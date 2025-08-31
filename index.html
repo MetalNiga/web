@@ -6,7 +6,7 @@
     <title>Randiom - Tu Radio Favorita</title>
     <style>
         body {
-            font-family: 'Courier New', Courier, monospace; /* Fuente de ancho fijo para el ASCII art */
+            font-family: 'Courier New', Courier, monospace;
             background-color: #000000;
             color: #ff8c00;
             text-align: center;
@@ -42,8 +42,15 @@
             margin-bottom: 40px;
             text-shadow: 0 0 10px rgba(255, 140, 0, 0.8);
         }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 854px; /* Ancho máximo ajustado para el reproductor */
+            gap: 20px;
+        }
         .iframe-container {
-            max-width: 1280px;
             width: 100%;
             padding: 20px;
             background-color: #1a1a1a;
@@ -53,10 +60,15 @@
         }
         iframe {
             width: 100%;
-            height: 720px;
             border: none;
             border-radius: 5px;
             background-color: #000000;
+        }
+        .radio-player-iframe {
+            height: 480px; /* Altura del reproductor ajustada a 480px */
+        }
+        .chat-iframe {
+            height: 400px; /* Altura del chat, puedes ajustarla */
         }
     </style>
 </head>
@@ -89,17 +101,20 @@
 ⢑⠄⠧⣟⡎⢆⡃⡊⠔⢀⠄⠈⣮⢟⡽⣿⣝⡆⠅⠐⡁⠐⠔⣀⢣⢑⠐⠁⡐⠈⡀⢐⠁⠄⠈⠃⢻⣿⣿⣿
 ⢑⠁⢮⣾⡎⢰⢐⠈⢌⢂⠐⡀⠂⡝⡽⣟⣿⣽⡪⢢⠂⡨⢪⠸⠨⢀⠂⡁⢀⠂⠄⢂⢊⠖⢄⠄⢀⢨⠉⠛
 ⡰⢺⣾⡗⠄⡜⢔⠡⢊⠢⢅⢀⠑⠨⡪⠩⠣⠃⠜⡈⡐⡈⡊⡈⡐⢄⠣⢀⠂⡂⡁⢂⠄⢱⢨⠝⠄⠄⠄⠄
-
         </pre>
     </div>
 
     <h1 class="title">Randiom</h1>
 
-    <div class="iframe-container">
-        <iframe id="player" tittle="Ejemplo de player incrustado" width="1280" height="720" src="https://38c17bd87d36.ngrok-free.app" style="border: 0px" allowfullscreen="allowfullscreen"></iframe>
+    <div class="container">
+        <div class="iframe-container">
+            <iframe id="player" tittle="Ejemplo de player incrustado" width="854" height="480" src="https://38c17bd87d36.ngrok-free.app" style="border: 0px" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+
+        <div class="iframe-container">
+            <iframe class="chat-iframe" src="https://www.twitch.tv/embed/nombredetucanal/chat?parent=tudominio.com" frameborder="0"></iframe>
+        </div>
     </div>
 
 </body>
 </html>
-
-
