@@ -63,14 +63,14 @@
             width: 100%;
             max-width: 1340px;
         }
-        .radio-container { /* Nuevo contenedor para el reproductor de radio */
+        .radio-container { /* Contenedor del reproductor de radio */
             padding: 20px;
             background-color: #1a1a1a;
             border: 2px solid #ff8c00;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
             box-sizing: border-box;
-            width: 854px; /* Ancho fijo para centrar */
+            max-width: 400px; /* Ancho más pequeño para el reproductor de audio */
             margin: 0 auto 20px; /* Centrado y espacio inferior */
             display: flex;
             flex-direction: column;
@@ -103,11 +103,11 @@
             text-transform: uppercase;
             margin-top: 0;
             margin-bottom: 10px;
+            font-family: 'Press Start 2P', cursive; /* Nueva tipografía para los títulos */
         }
         .radio-player-frame {
             width: 100%;
-            aspect-ratio: 16 / 9;
-            height: auto;
+            height: 100px; /* Tamaño más pequeño para el reproductor de audio */
             border: none;
             border-radius: 5px;
             background-color: #000000;
@@ -194,6 +194,7 @@
 
 </body>
 </html>
+
 
 
 
