@@ -63,7 +63,20 @@
             width: 100%;
             max-width: 1340px;
         }
-        .media-container, .chat-container {
+        .radio-container { /* Nuevo contenedor para el reproductor de radio */
+            padding: 20px;
+            background-color: #1a1a1a;
+            border: 2px solid #ff8c00;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+            box-sizing: border-box;
+            width: 854px; /* Ancho fijo para centrar */
+            margin: 0 auto 20px; /* Centrado y espacio inferior */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .video-container, .chat-container { /* Contenedores para video y chat */
             padding: 20px;
             background-color: #1a1a1a;
             border: 2px solid #ff8c00;
@@ -74,7 +87,7 @@
             flex-direction: column;
             align-items: center;
         }
-        .media-container {
+        .video-container {
             flex-grow: 1;
             flex-basis: 854px;
             min-width: 400px;
@@ -99,6 +112,14 @@
             border-radius: 5px;
             background-color: #000000;
         }
+        .video-stream-frame {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            height: auto;
+            border: none;
+            border-radius: 5px;
+            background-color: #000000;
+        }
         .chat-frame {
             width: 100%;
             height: 480px;
@@ -111,11 +132,10 @@
             .main-content-container {
                 flex-direction: column;
             }
-            .media-container, .chat-container {
+            .video-container, .chat-container, .radio-container {
                 width: 100%;
                 min-width: unset;
                 flex-basis: auto;
-                margin: 0 auto 20px;
             }
         }
     </style>
@@ -155,10 +175,15 @@
     <h1 class="title">Radiom</h1>
     <p class="subtitle">La radio mas random de Mendoza</p>
 
+    <div class="radio-container">
+        <h2 class="section-title">RADIO</h2>
+        <iframe id="radio-player" title="Reproductor de radio" src="https://9448ec0bdf1c.ngrok-free.app/stream" style="border: 0px" allowfullscreen="allowfullscreen" class="radio-player-frame"></iframe>
+    </div>
+
     <div class="main-content-container">
-        <div class="media-container">
+        <div class="video-container">
             <h2 class="section-title">STREAM</h2>
-            <iframe id="player" title="Reproductor de radio" src="https://9448ec0bdf1c.ngrok-free.app/stream" style="border: 0px" allowfullscreen="allowfullscreen" class="radio-player-frame"></iframe>
+            <iframe class="video-stream-frame" src="https://ejemplo-stream-video.com" style="border: 0px" allowfullscreen="allowfullscreen"></iframe>
         </div>
 
         <div class="chat-container">
@@ -169,6 +194,7 @@
 
 </body>
 </html>
+
 
 
 
