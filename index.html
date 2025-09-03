@@ -63,20 +63,7 @@
             width: 100%;
             max-width: 1340px;
         }
-        .radio-container { /* Contenedor del reproductor de radio */
-            padding: 20px;
-            background-color: #1a1a1a;
-            border: 2px solid #ff8c00;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
-            box-sizing: border-box;
-            max-width: 400px; /* Ancho más pequeño para el reproductor de audio */
-            margin: 0 auto 20px; /* Centrado y espacio inferior */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .video-container, .chat-container { /* Contenedores para video y chat */
+        .video-container, .chat-container {
             padding: 20px;
             background-color: #1a1a1a;
             border: 2px solid #ff8c00;
@@ -103,14 +90,17 @@
             text-transform: uppercase;
             margin-top: 0;
             margin-bottom: 10px;
-            font-family: 'Press Start 2P', cursive; /* Nueva tipografía para los títulos */
+            font-family: 'Press Start 2P', cursive;
         }
+        /* Estilos para el reproductor sin contenedor */
         .radio-player-frame {
-            width: 100%;
-            height: 100px; /* Tamaño más pequeño para el reproductor de audio */
-            border: none;
-            border-radius: 5px;
+            width: 400px; /* Ancho fijo para el reproductor de audio */
+            height: 100px; /* Altura fija para el reproductor de audio */
+            border: 2px solid #ff8c00;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
             background-color: #000000;
+            margin-bottom: 20px; /* Espacio para separar del contenido de abajo */
         }
         .video-stream-frame {
             width: 100%;
@@ -132,10 +122,13 @@
             .main-content-container {
                 flex-direction: column;
             }
-            .video-container, .chat-container, .radio-container {
+            .video-container, .chat-container {
                 width: 100%;
                 min-width: unset;
                 flex-basis: auto;
+            }
+            .radio-player-frame {
+                width: 100%;
             }
         }
     </style>
@@ -175,10 +168,7 @@
     <h1 class="title">Radiom</h1>
     <p class="subtitle">La radio mas random de Mendoza</p>
 
-    <div class="radio-container">
-        <h2 class="section-title">RADIO</h2>
-        <iframe id="radio-player" title="Reproductor de radio" src="https://9448ec0bdf1c.ngrok-free.app/stream" style="border: 0px" allowfullscreen="allowfullscreen" class="radio-player-frame"></iframe>
-    </div>
+    <iframe id="radio-player" title="Reproductor de radio" src="https://9448ec0bdf1c.ngrok-free.app/stream" style="border: 0px" allowfullscreen="allowfullscreen" class="radio-player-frame"></iframe>
 
     <div class="main-content-container">
         <div class="video-container">
@@ -194,7 +184,6 @@
 
 </body>
 </html>
-
 
 
 
