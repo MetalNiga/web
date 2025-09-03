@@ -74,10 +74,10 @@
             flex-direction: column;
             align-items: center;
         }
+        /* Nuevos estilos para el reproductor */
         .media-container {
-            flex-grow: 1;
-            flex-basis: 854px;
-            min-width: 400px;
+            width: 854px; /* Ancho fijo para centrar */
+            margin: 0 auto 20px; /* Centrado y espacio inferior */
         }
         .chat-container {
             flex-grow: 1;
@@ -115,6 +115,7 @@
                 width: 100%;
                 min-width: unset;
                 flex-basis: auto;
+                margin: 0 auto 20px;
             }
         }
     </style>
@@ -154,12 +155,12 @@
     <h1 class="title">Radiom</h1>
     <p class="subtitle">La radio mas random de Mendoza</p>
 
-    <div class="main-content-container">
-        <div class="media-container">
-            <h2 class="section-title">STREAM</h2>
-            <iframe id="player" title="Reproductor de radio" src="https://9448ec0bdf1c.ngrok-free.app/stream" style="border: 0px" allowfullscreen="allowfullscreen" class="radio-player-frame"></iframe>
-        </div>
+    <div class="media-container">
+        <h2 class="section-title">STREAM</h2>
+        <iframe id="player" title="Reproductor de radio" src="https://9448ec0bdf1c.ngrok-free.app/stream" style="border: 0px" allowfullscreen="allowfullscreen" class="radio-player-frame"></iframe>
+    </div>
 
+    <div class="main-content-container">
         <div class="chat-container">
             <h2 class="section-title">CHAT</h2>
             <iframe class="chat-frame" src="https://www3.cbox.ws/box/?boxid=3548819&boxtag=V3NDYa" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
@@ -168,6 +169,7 @@
 
 </body>
 </html>
+
 
 
 
